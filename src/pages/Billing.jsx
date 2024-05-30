@@ -54,7 +54,7 @@ const Billing = () => {
           </div>
 
           <div className="payment-icons-container">
-            <img
+            {/* <img
               src="https://cdn-icons-png.flaticon.com/128/5700/5700956.png"
               alt="card"
               className="payment-icon card"
@@ -67,8 +67,8 @@ const Billing = () => {
               className="payment-icon crypto"
               style={{ width: "40px", height: "40px" }}
               onClick={() => setButtonText("pay with crypto")}
-            />
-            <button className="paybtn">{buttonText}</button>
+            /> */}
+            <button className="paybtn">pay with card</button>
           </div>
         </div>
       </Card>
