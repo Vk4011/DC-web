@@ -7,7 +7,7 @@ import ToggleTheme from "./ToggleTheme";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import Billing from "../pages/Billing";
 import Home from "../pages/Home";
-import Serverless from "../pages/Serverless";
+import Pods from "../pages/Pods";
 import Storage from "../pages/Storage";
 import Usage from "../pages/Usage";
 import Mysettings from "../pages/Mysettings";
@@ -36,11 +36,11 @@ const Sidebar = () => {
       case "/home":
         return <Home />;
       case "/serverless":
-        return <Serverless />;
-      case "/billing":
-        return <Billing />;
+        return <Pods />;
       case "/storage":
         return <Storage />;
+      case "/billing":
+        return <Billing />;
       case "/usage":
         return <Usage />;
       case "/mysettings":
@@ -72,7 +72,13 @@ const Sidebar = () => {
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           onClick={() => setCollapsed(!collapsed)}
         />
-        <Content style={{ padding: "0 24px", minHeight: "100vh", background: colorBgContainer }}>
+        <Content
+          style={{
+            padding: "0 24px",
+            minHeight: "100vh",
+            background: colorBgContainer,
+          }}
+        >
           {renderComponent()}
         </Content>
       </Layout>
@@ -81,3 +87,6 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+
+

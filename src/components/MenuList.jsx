@@ -10,14 +10,14 @@ const MenuList = ({ darkTheme, onMenuClick }) => {
         Home
       </Menu.Item>
       <Menu.Item key="serverless" icon={<CloudServerOutlined />} onClick={() => onMenuClick('/serverless')}>
-        Serverless
-      </Menu.Item>
-      <Menu.Item key="billing" icon={<DollarOutlined />} onClick={() => onMenuClick('/billing')}>
-        Billing
+        Pods
       </Menu.Item>
       <Menu.Item key="storage" icon={<HddOutlined />} onClick={() => onMenuClick('/storage')}>
         Storage
       </Menu.Item>
+      <Menu.Item key="billing" icon={<DollarOutlined />} onClick={() => onMenuClick('/billing')}>
+        Billing
+      </Menu.Item>     
       <Menu.Item key="usage" icon={<ProductOutlined />} onClick={() => onMenuClick('/usage')}>
         Usage
       </Menu.Item>

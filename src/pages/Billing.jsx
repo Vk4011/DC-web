@@ -17,7 +17,7 @@ const Billing = () => {
 
   return (
     <>
-      <h1 style={{ marginBottom: 20 }}>Billing</h1>
+      <h1 style={{ marginBottom: 20,marginTop:20 }}>Billing</h1>
 
       <Card title="Balance" style={{ marginBottom: 20 }}>
         <div className="balance-container">
