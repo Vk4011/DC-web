@@ -11,10 +11,8 @@ const App = () => {
     <>
    
     <BrowserRouter>
-    <Sidebar />
       <Routes>
-      
-             
+      <Route path="/sidebar" element={<Sidebar/>}/>
       </Routes>
     </BrowserRouter>
     </>
