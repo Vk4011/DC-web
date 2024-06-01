@@ -9,7 +9,7 @@ const MenuList = ({ darkTheme, onMenuClick }) => {
       <Menu.Item key="home" icon={<HomeOutlined />} onClick={() => onMenuClick('/home')}>
         Home
       </Menu.Item>
-      <Menu.Item key="serverless" icon={<CloudServerOutlined />} onClick={() => onMenuClick('/serverless')}>
+      <Menu.Item key="serverless" icon={<CloudServerOutlined />} onClick={() => onMenuClick('/pods')}>
         Pods
       </Menu.Item>
       <Menu.Item key="storage" icon={<HddOutlined />} onClick={() => onMenuClick('/storage')}>

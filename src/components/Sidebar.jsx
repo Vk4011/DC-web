@@ -11,6 +11,7 @@ import Pods from "../pages/Pods";
 import Storage from "../pages/Storage";
 import Usage from "../pages/Usage";
 import Mysettings from "../pages/Mysettings";
+import Deploypod from "../pages/Deploypod"; 
 
 const { Sider, Content } = Layout;
 
@@ -18,6 +19,7 @@ const Sidebar = () => {
   const [darkTheme, setDarkTheme] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [currentPath, setCurrentPath] = useState("/home");
+  const [showDeployPod, setShowDeployPod] = useState(false);
 
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
@@ -29,14 +31,22 @@ const Sidebar = () => {
 
   const handleMenuClick = (path) => {
     setCurrentPath(path);
+    setShowDeployPod(false); // Reset to ensure Pods is displayed when navigating
+  };
+
+  const handleDeployClick = () => {
+    setShowDeployPod(true);
   };
 
   const renderComponent = () => {
+    if (showDeployPod) {
+      return <Deploypod />;
+    }
     switch (currentPath) {
       case "/home":
         return <Home />;
-      case "/serverless":
-        return <Pods />;
+      case "/pods":
+        return <Pods onDeployClick={handleDeployClick} />;
       case "/storage":
         return <Storage />;
       case "/billing":
@@ -87,6 +97,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
-
-
