@@ -58,3 +58,10 @@
 .toggle {
     margin-left: 15px;
 }
+
+
+  
+  .ant-layout-content {
+    background: transparent !important;
+  }
+  
