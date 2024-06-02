@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Landingpage = () => {
   return (
+    <>
+    <Navbar/>
     <div
       className="bg-cover bg-center min-h-screen flex justify-center items-center"
       style={{
-        backgroundImage: `url('https://img.freepik.com/free-photo/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-63996.jpg?t=st=1717162636~exp=1717166236~hmac=5a45e6a345e1edcba31674586805aeeb6e3989a1b4cebc24a530074b9efc8e9e&w=1800')`,
+        backgroundColor:"black"
       }}
     >
       <div className="text-center text-white">
@@ -22,6 +25,7 @@ const Landingpage = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 
