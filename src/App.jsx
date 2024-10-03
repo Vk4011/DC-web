@@ -5,6 +5,7 @@ import "./styles/Sidebar.css";
 import Login from "./Auth/Login";
 import Register from "./Auth/Register";
 import Landingpage from "./screens/Landingpage";
+import MySettings from "./pages/Mysettings";
 
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
       <Route path="/signup" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/sidebar" element={<Sidebar/>}/>
-      </Routes>
+     </Routes>
     </BrowserRouter>
     </>
     
